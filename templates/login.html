@@ -10,7 +10,7 @@
 
     <div class="form-group">
         {{form_login.username.errors}}
-        <label>Username: </label>
+        <label>Usuário: </label>
         {{form_login.username}}
     </div>
 
@@ -20,9 +20,17 @@
         {{form_login.password}}
     </div>
 
-    <div class="form-group">
-        <button onclick="window.location.href = 'http://pt.stackoverflow.com'">Entrar</button>
-    </div>
+{% include 'errors.html' %}
+     <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-primary" href='http://127.0.0.1:8000/fimdatela'>
+       <br>
+     </div>
+
+
+</body>
+</html>
+
 </form>
 </body>
 </html>
+

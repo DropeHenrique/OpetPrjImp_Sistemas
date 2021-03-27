@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
+{% if item.total_error_count %}
+    <div class="alert alert-danger col-12 mx-1" role="alert">
+        <div id="form_errors">
+            {% if item.non_form_errors %}
+                {{ item.non_form_errors }}
+            {% endif %}
+            {% for error in item.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
 </body>
 </html>

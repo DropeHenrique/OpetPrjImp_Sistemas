@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from app.views import cadastrar_usuario
+from app.views import cadastrar
 from app.views import index
-from app.views import logar_usuario
+from app.views import logar
+from app.views import fimdatela
 
 urlpatterns = [
-    path('logar_usuario', logar_usuario, name="logar_usuario"),
-    path('cadastrar_usuario', cadastrar_usuario, name="cadastrar_usuario"),
+    path('cadastrar', cadastrar, name="cadastrar"),
+    path('logar', logar, name="logar"),
     path('index', index, name="index"),
+    path('fimdatela', fimdatela, name ="fimdatela"),
 ]
