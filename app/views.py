@@ -15,7 +15,7 @@ def cadastrar(request):
     else:
         form_usuario = UserCreationForm()
     return render(request, 'cadastro.html', {'form_usuario': form_usuario})
-
+    return (print "aguardando aprovação")
 
 def logar(request):
     if request.method == "POST":

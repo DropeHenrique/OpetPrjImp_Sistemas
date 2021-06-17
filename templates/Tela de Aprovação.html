@@ -1,0 +1,53 @@
+DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aprovação de Usuários</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="form-group">
+        {{form_usuario.username.errors}}
+        <label>Usuário: </label>
+        {{form_usuario.username}}
+    </div>
+        <div class="form-group">
+        {{form_usuario.date.errors}}
+        <label>Data de Nascimento </label>
+            <input id="date" type="date">
+            {{ form_usuario.username }}
+        </div>
+
+     <div class="form-group">
+        {{form_usuario.curso.errors}}
+        <label>Curso: </label>
+        {{form_usuario.username}}
+    </div>
+    </div>
+        <div class="form-group">
+        {{form_usuario.periodo.errors}}
+        <label> Periodo do Curso </label>
+            {{form_usuario.username}}
+        </div>
+    <div class="form-group">
+        {{form_usuario.password1.errors}}
+        <label>Senha: </label>
+        {{form_usuario.password1}}
+    </div>
+
+    <div class="form-group">
+        {{form_usuario.password2.errors}}
+        <label>Confirmação de senha: </label>
+        {{form_usuario.password2}}
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-primary">
+    </div>
+</form>
+
+</body>
+</html>
